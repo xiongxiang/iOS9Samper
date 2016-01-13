@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y9t-jV-mwc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--iOS 9 Sampler-->
+        <scene sceneID="tP0-Qb-k5K">
+            <objects>
+                <tableViewController id="W4X-6w-OvZ" customClass="RootViewController" customModule="iOS_9_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="fcM-M4-68K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="70" id="5ri-Vc-jNz" customClass="RootViewCell" customModule="iOS_9_Sampler" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ri-Vc-jNz" id="t43-eb-9Hx">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moe-cc-piO">
+                                            <rect key="frame" x="8" y="8" width="32" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="0.31688930014026673" green="0.89069797281519525" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GB-6b-0TB">
+                                            <rect key="frame" x="8" y="40" width="551" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="O7P-d0-vHw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="topMargin" secondItem="moe-cc-piO" secondAttribute="top" id="3sa-Hp-ki4"/>
+                                        <constraint firstItem="4GB-6b-0TB" firstAttribute="top" secondItem="moe-cc-piO" secondAttribute="bottom" constant="11" id="PZK-eO-j4M"/>
+                                        <constraint firstItem="4GB-6b-0TB" firstAttribute="bottom" secondItem="t43-eb-9Hx" secondAttribute="bottomMargin" id="XNN-l6-nRd"/>
+                                        <constraint firstItem="4GB-6b-0TB" firstAttribute="trailing" secondItem="t43-eb-9Hx" secondAttribute="trailingMargin" id="dRc-7B-7NX"/>
+                                        <constraint firstItem="4GB-6b-0TB" firstAttribute="leading" secondItem="moe-cc-piO" secondAttribute="leading" id="e8n-7Q-oag"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="moe-cc-piO" secondAttribute="leading" id="pke-B7-fVe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="detailLabel" destination="4GB-6b-0TB" id="j6c-eZ-Z3a"/>
+                                    <outlet property="titleLabel" destination="moe-cc-piO" id="BjH-XW-RYa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W4X-6w-OvZ" id="hEe-0v-axf"/>
+                            <outlet property="delegate" destination="W4X-6w-OvZ" id="d1M-u8-aeu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="iOS 9 Sampler" id="BPy-jg-RN8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F86-ry-hc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280" y="483"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P2Q-Xs-wTg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y9t-jV-mwc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5TE-FL-FXE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W4X-6w-OvZ" kind="relationship" relationship="rootViewController" id="0c6-mb-ECj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6S-R4-892" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="483"/>
+        </scene>
+    </scenes>
+</document>
